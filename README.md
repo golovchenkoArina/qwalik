@@ -44,6 +44,7 @@ mkdir test
 sudo chown student1:students test
 - выдать права
 chmod 770 test
+
 # 15. настроить аутентификацию и журналирование
 - просмотреть журнал
 journalctl
