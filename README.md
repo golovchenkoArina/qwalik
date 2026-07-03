@@ -57,25 +57,25 @@ apt-cache depends gimp
 gimp --version
 
 Создание папки для бэкапов:
-Команда: sudo mkdir -p /backup
+sudo mkdir -p /backup
 Результат: Папка создана
 
 Бэкап системы (tar):
-Команда: sudo tar -czpf /backup/backup.tar.gz --exclude=/proc --exclude=/sys --exclude=/dev --exclude=/tmp /
+sudo tar -czpf /backup/backup.tar.gz --exclude=/proc --exclude=/sys --exclude=/dev --exclude=/tmp /
 Результат: Архив создан
 
 Бэкап через rsync:
-Команда: sudo rsync -aAXv --exclude={/proc,/sys,/dev,/tmp} / /backup/system/
+sudo rsync -aAXv --exclude={/proc,/sys,/dev,/tmp} / /backup/system/
 Результат: Копия создана
 
 Точка восстановления (Timeshift):
-Команда: sudo timeshift --create --comments "Точка"
+sudo timeshift --create --comments "Точка"
 Результат: Точка создана
 
 Проверка бэкапов:
-Команда: ls -lh /backup/
+ls -lh /backup/
 Результат: Все файлы видны
 
 Размер бэкапа:
-Команда: du -sh /backup/*
+du -sh /backup/*
 Результат: Размер отображается
